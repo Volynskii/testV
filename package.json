@@ -10,8 +10,10 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "normalize.css": "^8.0.1",
     "nuxt": "^3.13.0",
     "pinia": "^2.2.2",
+    "reset-css": "^5.0.2",
     "vue": "latest",
     "vue-router": "latest"
   }
