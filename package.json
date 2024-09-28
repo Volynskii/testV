@@ -16,5 +16,8 @@
     "reset-css": "^5.0.2",
     "vue": "latest",
     "vue-router": "latest"
+  },
+  "devDependencies": {
+    "sass-embedded": "^1.79.3"
   }
 }
