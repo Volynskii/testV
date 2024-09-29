@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { ref, onMounted } from 'vue';
+  import { ref } from 'vue';
   // Import Swiper Vue.js components
   import { Swiper, SwiperSlide } from 'swiper/vue';
 
@@ -13,14 +13,6 @@
   import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 
   const thumbsSwiper = ref<Swiper | null>(null);
-
-  // onMounted(() => {
-  //   const swiper = {
-  //     el: document.querySelector('.mySwiper'),
-  //     // опции слайдера
-  //   };
-  //   thumbsSwiper.value = swiper;
-  // });
 
   const setThumbsSwiper = (swiper: Swiper) => {
     thumbsSwiper.value = swiper;
