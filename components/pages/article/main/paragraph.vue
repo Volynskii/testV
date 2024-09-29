@@ -18,10 +18,9 @@
 
 <style module lang="scss">
   .paragraph {
-    font-style: normal;
+    font-size: 17px;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
-    color: #000000;
+    line-height: 22.1px;
+    text-align: left;
   }
 </style>

@@ -4,7 +4,7 @@
 
 <template>
   <div :class="$style.changes">
-    <div><span>Отображение данных и изменения интерфейса</span></div>
+    <div><span :class="$style.title">Отображение данных и изменения интерфейса</span></div>
 
     <PagesArticleMainParagraph 
       :text="`
@@ -12,19 +12,37 @@
       `"
     />
 
-    <ul>
+    <ul :class="$style.list">
       <li>добавлена возможность задавать цвет фона ячейки при выгрузке отчета xlsx;</li>
       <li>для виджета «Спидометр» добавлены возможности изменять диапазоны виджета динамически (по входному параметру, переменной) и задавать отображаемое значение в виде текста с параметрами;</li>
       <li>для виджета «Таймлайн» добавлена возможность поиска;</li>
       <li>для связанных блоков виджетов добавлена возможность выбирать тип связи (left join, right join, inner join);</li>
       <li>обновлен редактор представлений, добавлено отображение модуля, в котором редактируются представления данных;</li>
-      
     </ul>
+
   </div>
 </template>
 
 <style module lang="scss">
   .changes {
-    
+    .title {
+    }
+
+    .list {
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 22.1px;
+      text-align: left;
+
+      li {
+        display: flex;
+        margin: 24px 0;
+
+        &:before {
+          content: "●";
+          margin: 0px 7px;
+        }
+      }
+    }
   }
 </style>

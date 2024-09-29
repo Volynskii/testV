@@ -23,7 +23,38 @@ const info = {
   updated: 'обновлено 15:02,пн',
   person: 'николай Константинопольский',
   topic: 'политика'
-}
+};
+
+const dataTags = [
+    {
+      id: 1,
+      name: 'политика'
+    },
+    {
+      id: 2,
+      name: 'вооруженные силы'
+    },
+    {
+      id: 3,
+      name: 'внутренняя политика'
+    },
+    {
+      id: 4,
+      name: 'внешняя политика'
+    },
+    {
+      id: 5,
+      name: 'политическая аналитика'
+    },
+    {
+      id: 6,
+      name: 'владимир путин'
+    },
+    {
+      id: 7,
+      name: 'иммиграция'
+    },
+  ]
 
 </script>
 
@@ -106,25 +137,37 @@ const info = {
     <div :class="$style.container">
       <PagesArticleMainChanges />
     </div>
+
+    <div :class="$style.moreNews">
+      <PagesArticleMainMoreNews />
+    </div>
+
+    <div :class="$style.tags">
+      <Tags :data="dataTags"/>
+    </div>
+
+
     
   </div>
 </template>
 
 <style module lang="scss">
   .main {
+    font-family: 'NunitoSans';
     background: white;
     box-shadow: -15px 0px 20px 0px rgba(0, 0, 0, 0.3);
     padding-top: 20px;
+    max-width: 645px;
 
     .mainPicture {
-      width: 100%;
+      margin-right: 21px;
       .image {
         width: 100%;
       }
     }
     
     .citationBlock {
-      margin-left: 15px;
+      margin: 0 15px;
       background-color: wheat;
       border-radius: 15px;
       padding: 24px;
@@ -146,9 +189,17 @@ const info = {
       }
     }
 
+    .moreNews {
+      margin: 24px 27px;
+    }
+
+    .tags {
+      margin: 24px 27px;
+    }
+
     .container {
       font-family: 'Manrope';
-      margin: 24px 32px 24px 52px;
+      margin: 24px 52px 24px 52px;
 
       .title {
         font-style: normal;
