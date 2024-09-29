@@ -23,6 +23,11 @@
     font-weight: 400, 700, 700, 400, 400;
   }
 
+  @font-face {
+    font-family: 'NunitoSans';
+    src: url('@/assets/fonts/NunitoSans/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf') format('truetype');
+  }
+
   * {
     box-sizing: border-box;
   }
@@ -30,5 +35,7 @@
   body {
     font-family: 'Manrope', sans-serif;
     background: black;
+    display: flex;
+    justify-content: center;
   }
 </style>
