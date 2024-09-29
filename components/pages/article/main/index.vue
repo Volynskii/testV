@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import Pppp from './sliders.vue';
+
 
 </script>
 
@@ -60,6 +62,38 @@
 
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div :class="$style.container">
+      <div :class="$style.article">
+        <p>
+          Онлайн-опрос проводился 3-4 июля 2024 года, в нем приняли 
+          участие 1500 пользователей соцсетей от 18 до 45+ лет, 
+          проживающих в городах-миллионниках. 43 процента 
+          опрошенных отметили, что блогеры могут повлиять на их 
+          поведение — на желание попробовать новое хобби, посетить то 
+          или иное место или сменить стиль одежды. В то же время 36 
+          процентов россиян думают, что мнение инфлюэнсера никак не 
+          влияет на их ежедневную жизнь.
+        </p>
+      </div>
+    </div>
+
+    <div :class="$style.container">
+      <div :class="$style.pictures">
+
+        <div :class="$style.picture">
+          <PagesArticleMainSliders/>
+        </div>
+        <div :class="$style.info">
+          <span>
+            В действительности тиражируемое видео является дипфейком, о чем можно судить по ряду признаков. 
+          </span>
+          <span>
+            Фото: Amir Cohen / Reuters
+          </span>
         </div>
       </div>
     </div>
@@ -166,6 +200,10 @@
         font-size: 16px;
         line-height: 22px;
         color: #000000;
+      }
+
+      .pictures {
+
       }
 
     }
