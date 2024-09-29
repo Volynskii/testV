@@ -1,61 +1,50 @@
-
 <script setup lang="ts">
+import type { PropType } from 'vue';
 
-const data = [
-  {
-    id: 1,
-    title: 'Кнайсль: ФРГ не осознает, что для россиян значат немецкие машины ВСУ под Курском',
-    image: 'https://cdn-st1.smotrim.ru/vh/pictures/lw/407/643/9.jpg',
-    description: 'Росгвардейцы с помощью беспилотника обнаружили стартовые позиции ударных БПЛА ВСУ',
-    topic: 'политика',
-    time: '2022-07-25T14:30:00.000Z',
-  },
-  {
-    id: 2,
-    title: 'Кнайсль: ФРГ не осознает, что для россиян значат немецкие машины ВСУ под Курском',
-    image: 'https://cdn-st1.smotrim.ru/vh/pictures/lw/407/643/9.jpg',
-    description: 'Росгвардейцы с помощью беспилотника обнаружили стартовые позиции ударных БПЛА ВСУ',
-    topic: 'политика',
-    time: '2022-07-25T14:30:00.000Z',
-    urgently: true
-  },
-  {
-    id: 3,
-    title: 'Самолет из Хабаровска с задымлением готовится к аварийной посадке',
-    image: 'https://cdn-st1.smotrim.ru/vh/pictures/lw/407/643/9.jpg',
-    description: 'Росгвардейцы с помощью беспилотника обнаружили стартовые позиции ударных БПЛА ВСУ',
-    topic: 'политика',
-    time: '2022-07-25T14:30:00.000Z',
-    urgently: false
+const props = defineProps({
+  newsFeedData: {
+    type: Array as PropType<Array<{
+      id: number;
+      title: string;
+      image: string;
+      description: string;
+      topic: string;
+      time: string;
+      urgently?: boolean;
+    }>>,
+    required: true,
   }
-]
+});
 
 function getTime(time: string): string {
   const date = new Date(time);
   return date.getHours() + ':' + date.getMinutes();
-};
+}
 </script>
 
 <template>
   <div :class="$style.newsFeed">
 
-    <div>
-      <NewsFeedHead :title="data[0].title" :description="data[0].description" :time="getTime(data[0].time)"/>
+    <div v-if="newsFeedData.length">
+      <NewsFeedHead :title="newsFeedData[0].title" :description="newsFeedData[0].description" :time="getTime(newsFeedData[0].time)"/>
     </div>
 
     <div>
-      <template v-for="(item, index) in data" :key="item.id">
-        <NewsFeedItem :urgently="item.urgently" :title="item.title"  :topic="item.topic" :time="getTime(item.time)"/>
+      <template v-for="({urgently, title, topic, time, image}) in newsFeedData" :key="item.id">
+        <NewsFeedItem :urgently="urgently" :title="title"  :topic="topic" :time="getTime(time)" :image="image"/>
       </template>
     </div>
+
+    <!-- Слот для кнопки -->
+    <slot name="newsFeedButton"></slot>
+
   </div>
 </template>
 
 <style module lang="scss">
-  .newsFeed {
-    max-width: 465px;
-    background: white;
-
-    padding-top: 20px;
-  }
+.newsFeed {
+  max-width: 465px;
+  background: white;
+  padding-top: 20px;
+}
 </style>
