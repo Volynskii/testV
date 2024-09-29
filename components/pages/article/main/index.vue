@@ -1,6 +1,29 @@
 <script setup lang="ts">
-import Pppp from './sliders.vue';
 
+const textForArticle = `
+  Онлайн-опрос проводился 3-4 июля 2024 года, в нем приняли 
+  участие 1500 пользователей соцсетей от 18 до 45+ лет, 
+  проживающих в городах-миллионниках. 43 процента 
+  опрошенных отметили, что блогеры могут повлиять на их 
+  поведение — на желание попробовать новое хобби, посетить то 
+  или иное место или сменить стиль одежды. В то же время 36 
+  процентов россиян думают, что мнение инфлюэнсера никак не 
+  влияет на их ежедневную жизнь.
+`
+
+const picturesData = {
+  description: 'В действительности тиражируемое видео является дипфейком, о чем можно судить по ряду признаков.',
+  name: 'Amir Cohen',
+  position: 'Reuters'
+}
+
+
+const info = {
+  created: '14:30,пн',
+  updated: 'обновлено 15:02,пн',
+  person: 'николай Константинопольский',
+  topic: 'политика'
+}
 
 </script>
 
@@ -11,16 +34,12 @@ import Pppp from './sliders.vue';
       <img :class="$style.image" src="https://cdn-st1.smotrim.ru/vh/pictures/xw/334/156/6.jpg" alt="main">
     </div>
     <div :class="$style.container"> 
-      <div :class="$style.info">
-        <div :class="$style.left">
-          <span :class="$style.created">14:30,пн</span>
-          <span :class="$style.updated">обновлено 15:02,пн</span>
-          <span :class="$style.person">/ николай Константинопольский</span>
-        </div>
-        <div :class="$style.right">
-          <span>политика</span>
-        </div>
-      </div>
+      <PagesArticleMainInfo 
+        :created="info.created"
+        :updated="info.updated"
+        :person="info.person"
+        :topic="info.topic"
+      />
     </div>
     <div :class="$style.container">
       <div :class="$style.title">
@@ -32,13 +51,7 @@ import Pppp from './sliders.vue';
     </div>
 
     <div :class="$style.container">
-      <div :class="$style.article">
-        <p>
-          Почти половина жителей России готова прислушиваться к мнению блогеров при выборе хобби, мест для путешествий
-          или при смене стиля одежды. К такому выводу пришли в своем исследовании платформа коротких видео «VK Клипы»
-          и сервис Anketolog.ru, результаты есть в распоряжении «Вести.ру».
-        </p>
-      </div>
+      <PagesArticleMainParagraph :text="textForArticle"/>
     </div>
 
     <div :class="$style.citationBlock">
@@ -67,80 +80,31 @@ import Pppp from './sliders.vue';
     </div>
 
     <div :class="$style.container">
-      <div :class="$style.article">
-        <p>
-          Онлайн-опрос проводился 3-4 июля 2024 года, в нем приняли 
-          участие 1500 пользователей соцсетей от 18 до 45+ лет, 
-          проживающих в городах-миллионниках. 43 процента 
-          опрошенных отметили, что блогеры могут повлиять на их 
-          поведение — на желание попробовать новое хобби, посетить то 
-          или иное место или сменить стиль одежды. В то же время 36 
-          процентов россиян думают, что мнение инфлюэнсера никак не 
-          влияет на их ежедневную жизнь.
-        </p>
-      </div>
+      <PagesArticleMainParagraph :text="textForArticle"/>
     </div>
 
     <div :class="$style.container">
-      <div :class="$style.pictures">
-
-        <div :class="$style.picture">
-          <PagesArticleMainSliders/>
-        </div>
-        <div :class="$style.info">
-          <span>
-            В действительности тиражируемое видео является дипфейком, о чем можно судить по ряду признаков. 
-          </span>
-          <span>
-            Фото: Amir Cohen / Reuters
-          </span>
-        </div>
-      </div>
+      <PagesArticleMainPictures 
+        :description="picturesData.description" 
+        :name="picturesData.name" 
+        :position="picturesData.position" 
+      />
     </div>
 
     <div :class="$style.container">
-      <div :class="$style.article">
-        <p>
-          Онлайн-опрос проводился 3-4 июля 2024 года, в нем приняли 
-          участие 1500 пользователей соцсетей от 18 до 45+ лет, 
-          проживающих в городах-миллионниках. 43 процента 
-          опрошенных отметили, что блогеры могут повлиять на их 
-          поведение — на желание попробовать новое хобби, посетить то 
-          или иное место или сменить стиль одежды. В то же время 36 
-          процентов россиян думают, что мнение инфлюэнсера никак не 
-          влияет на их ежедневную жизнь.
-        </p>
-      </div>
+      <PagesArticleMainParagraph :text="textForArticle"/>
     </div>
 
     <div :class="$style.container">
-      <div :class="$style.article">
-        <p>
-          Онлайн-опрос проводился 3-4 июля 2024 года, в нем приняли 
-          участие 1500 пользователей соцсетей от 18 до 45+ лет, 
-          проживающих в городах-миллионниках. 43 процента 
-          опрошенных отметили, что блогеры могут повлиять на их 
-          поведение — на желание попробовать новое хобби, посетить то 
-          или иное место или сменить стиль одежды. В то же время 36 
-          процентов россиян думают, что мнение инфлюэнсера никак не 
-          влияет на их ежедневную жизнь.
-        </p>
-      </div>
+      <PagesArticleMainParagraph :text="textForArticle"/>
     </div>
 
     <div :class="$style.container">
-      <div :class="$style.article">
-        <p>
-          Онлайн-опрос проводился 3-4 июля 2024 года, в нем приняли 
-          участие 1500 пользователей соцсетей от 18 до 45+ лет, 
-          проживающих в городах-миллионниках. 43 процента 
-          опрошенных отметили, что блогеры могут повлиять на их 
-          поведение — на желание попробовать новое хобби, посетить то 
-          или иное место или сменить стиль одежды. В то же время 36 
-          процентов россиян думают, что мнение инфлюэнсера никак не 
-          влияет на их ежедневную жизнь.
-        </p>
-      </div>
+      <PagesArticleMainParagraph :text="textForArticle"/>
+    </div>
+
+    <div :class="$style.container">
+      <PagesArticleMainChanges />
     </div>
     
   </div>
@@ -192,18 +156,6 @@ import Pppp from './sliders.vue';
         font-size: 20px;
         line-height: 27px;
         color: #000000;
-      }
-
-      .article {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
-        color: #000000;
-      }
-
-      .pictures {
-
       }
 
     }

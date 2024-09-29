@@ -5,15 +5,11 @@
 
 <template>
   <div :class="$style.article">
-    <div :class="$style.newsFeed">
       <PagesArticleNewsFeed />
-    </div>
-    <div :class="$style.main">
+      
       <PagesArticleMain />
-    </div>
-    <div :class="$style.promo">
+      
       <PagesArticlePromo />
-    </div>
   </div>
 </template>
 
