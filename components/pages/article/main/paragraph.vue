@@ -9,15 +9,14 @@
 </script>
 
 <template>
-  <div :class="$style.paragraph">
-    <p>
-      {{ text }}
-    </p>
-  </div>
+  <p :class="$style.paragraph">
+    {{ text }}
+  </p>
 </template>
 
 <style module lang="scss">
   .paragraph {
+    display: inline;
     font-size: 17px;
     font-weight: 400;
     line-height: 22.1px;

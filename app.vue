@@ -14,13 +14,12 @@
 
   @font-face {
     font-family: 'Cousine';
-    src: 
-      url('@/assets/fonts/Cousine/Cousine-Regular.ttf') format('truetype'),
-      url('@/assets/fonts/Cousine/Cousine-Bold.ttf') format('truetype'),
-      url('@/assets/fonts/Cousine/Cousine-BoldItalic.ttf') format('truetype'),
-      url('@/assets/fonts/Cousine/Cousine-Italic.ttf') format('truetype');
-    font-style: normal, bold, bold italic, italic, normal;
-    font-weight: 400, 700, 700, 400, 400;
+    src: url('@/assets/fonts/Cousine/Cousine-Regular.ttf') format('truetype'),
+        url('@/assets/fonts/Cousine/Cousine-Bold.ttf') format('truetype'),
+        url('@/assets/fonts/Cousine/Cousine-BoldItalic.ttf') format('truetype'),
+        url('@/assets/fonts/Cousine/Cousine-Italic.ttf') format('truetype');
+    font-style: normal, bold, italic, normal italic;
+    font-weight: 400, 700;
   }
 
   @font-face {
@@ -38,4 +37,5 @@
     display: flex;
     justify-content: center;
   }
+  
 </style>

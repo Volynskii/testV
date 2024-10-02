@@ -30,7 +30,8 @@ defineProps({
     <div :class="$style.left">
       <span :class="$style.created">{{ created }}</span>
       <span :class="$style.updated">{{ updated }}</span>
-      <span :class="$style.person">/ {{ person }}</span>
+      <span :class="$style.slash">/</span>
+      <span :class="$style.person"> {{ person }}</span>
     </div>
     <div :class="$style.right">
       <span>{{ topic }}</span>
@@ -40,21 +41,45 @@ defineProps({
 
 <style module lang="scss">
   .info {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 52px 0 52px;
+    text-transform: uppercase;
+
     .left {
+      font-family: 'Cousine';
+      text-align: left;
+      color: rgba(0, 0, 0, 1);
+      display: flex;
+      gap: 8px;
+
       .created {
-        // font-style: normal;
-        // font-weight: 400;
-        // font-size: 12px;
-        // line-height: 16px;
-        // color: #A0A0A0;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 12px;
+        letter-spacing: 0.06em;
       }
       .updated {
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 12px;
+        letter-spacing: 0.06em;
+        opacity: 0.4;
       }
-      .person {
+      .person, .slash {
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 12px;
+        letter-spacing: 0.06em;
+        text-align: center;
       }
     }
     .right {
-
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 12px;
+      letter-spacing: 0.06em;
+      text-align: right;
     }
   }
 </style>

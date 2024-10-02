@@ -93,7 +93,7 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 12px;
-      font-family: Cousine;
+      font-family: 'Cousine';
       font-size: 10px;
       line-height: 12px;
       font-weight: 400;

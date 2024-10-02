@@ -101,7 +101,7 @@ const stylesBg = props.image && {marginRight: '170px', marginBottom: '20px'};
           margin-bottom: 32px;
           color: rgba(255, 255, 255, 1);
           font-size: 12px;
-          font-family: Cousine;
+          font-family: 'Cousine';
           font-weight: 400;
           line-height: 15px;
           opacity: 0.8;

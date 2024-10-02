@@ -35,7 +35,7 @@
     justify-content: center;
     gap: 4px;
 
-    font-family: Cousine;
+    font-family: 'Cousine';
     font-size: 12px;
     font-weight: 400;
     line-height: 16.8px;

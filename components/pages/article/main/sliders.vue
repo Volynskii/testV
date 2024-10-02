@@ -78,35 +78,20 @@
     .article__slider_first {
       margin-bottom: 8px;
       .swiper-slide {
-        border-radius: 16px;
-        overflow: hidden;
+        img {
+          border-radius: 16px;
+          overflow: hidden;
+        }
       }
     }
 
     .article__slider_second {
       .swiper-slide {
-        border-radius: 12px;
-        overflow: hidden;
+        img {
+          border-radius: 12px;
+          overflow: hidden;
+        }
       }
     }
   }
-
-  // .mySwiper {
-
-  //   .swiper-wrapper {
-  //   }
-
-  //   .swiper-slide {
-  //     overflow: hidden;
-  //     border-radius: 16px;
-  //   }
-  // }
-
-  // .wwww {
-  //   width: 1000px;
-
-  //   img {
-  //     width: 100%;
-  //   }
-  // }
 </style>

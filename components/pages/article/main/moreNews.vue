@@ -69,7 +69,7 @@
 <style module lang="scss">
   .moreNews {
     padding: 24px 21px 20px 21px;
-    background: wheat;
+    background: hwb(300 87% 13%);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -83,6 +83,7 @@
       line-height: 16.8px;
       text-align: left;
       margin-bottom: 16px;
+      text-transform: uppercase;
     }
 
     .earlier {
@@ -119,13 +120,12 @@
 
         &Top {
           p {
-            font-family: Manrope;
             font-size: 14px;
             font-weight: 600;
             line-height: 16.24px;
             text-align: left;
             color: rgba(20, 22, 26, 1);
-            margin-right: 16px;
+            margin: 0 16px 8px 0;
           }
         }
 
@@ -139,7 +139,7 @@
           z-index: 1;
 
           .time {
-            font-family: Cousine;
+            font-family: 'Cousine';
             font-size: 10px;
             font-weight: 400;
             line-height: 12px;
